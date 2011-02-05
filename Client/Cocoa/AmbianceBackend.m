@@ -65,7 +65,9 @@
 {
     NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
     [self.runningURLConnections addObject:con];
-    [self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
+	
+	if (done)
+		[self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
 }
 
 - (void) postState:(NSDictionary*) state toServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;

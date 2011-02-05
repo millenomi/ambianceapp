@@ -281,7 +281,7 @@
 		159019EE12FD6708007D7AE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -349,6 +349,7 @@
 				151D84C612FD9FD20076E9FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		159019DC12FD6707007D7AE7 /* Build configuration list for PBXProject "AmbianceClient" */ = {
 			isa = XCConfigurationList;

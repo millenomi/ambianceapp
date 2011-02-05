@@ -28,4 +28,7 @@ typedef void (^AmbianceResponse)(NSHTTPURLResponse* resp, NSData* data);
 
 - (void) fetchStateOfServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
 
+// TODO extract this.
+- (void) fetchURLRequest:(NSURLRequest*) req ifSucceeds:(AmbianceResponse) done;
+
 @end

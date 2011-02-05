@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151D84DE12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.m in Sources */ = {isa = PBXBuildFile; fileRef = 151D84DD12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.m */; };
 		1580702B12FD7BB2008A7013 /* AmbianceSource_iTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */; };
 		1580703012FD7E72008A7013 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1580702F12FD7E72008A7013 /* ScriptingBridge.framework */; };
 		159019D312FD64D9007D7AE7 /* StatusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D212FD64D9007D7AE7 /* StatusIcon.pdf */; };
@@ -21,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		151D84DA12FDB0A60076E9FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 151D84BE12FD9FD20076E9FF;
+			remoteInfo = "AmbianceClient-iOS";
+		};
 		1580703612FD8159008A7013 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
@@ -35,16 +43,11 @@
 			remoteGlobalIDString = 159019E112FD6708007D7AE7;
 			remoteInfo = "AmbianceClient-Mac";
 		};
-		15E5567D12FD92A300327CFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 15E5567B12FD92A300327CFE;
-			remoteInfo = "AmbianceClient-Mac copy";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		151D84DC12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbianceSource_AudioBoxFM.h; path = Ambiance/AmbianceSource_AudioBoxFM.h; sourceTree = "<group>"; };
+		151D84DD12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AmbianceSource_AudioBoxFM.m; path = Ambiance/AmbianceSource_AudioBoxFM.m; sourceTree = "<group>"; };
 		1580702912FD7BB2008A7013 /* AmbianceSource_iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbianceSource_iTunes.h; sourceTree = "<group>"; };
 		1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbianceSource_iTunes.m; sourceTree = "<group>"; };
 		1580702D12FD7E01008A7013 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
@@ -81,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151D84D812FDB0A60076E9FF /* AudioBox.fm */ = {
+			isa = PBXGroup;
+			children = (
+				151D84DC12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.h */,
+				151D84DD12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.m */,
+			);
+			name = AudioBox.fm;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		1580702E12FD7E06008A7013 /* iTunes */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				1580703712FD8159008A7013 /* libAmbianceClient-Mac.a */,
-				15E5567E12FD92A300327CFE /* libAmbianceClient-Mac copy.a */,
+				151D84DB12FDB0A60076E9FF /* libAmbianceClient-iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 			children = (
 				15B08B9F12FD5E8A00BA0A0A /* AmbianceAppDelegate.h */,
 				15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */,
+				151D84D812FDB0A60076E9FF /* AudioBox.fm */,
 				1580702E12FD7E06008A7013 /* iTunes */,
 				15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */,
 				15B08B9412FD5E8A00BA0A0A /* Supporting Files */,
@@ -222,18 +236,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		151D84DB12FDB0A60076E9FF /* libAmbianceClient-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAmbianceClient-iOS.a";
+			remoteRef = 151D84DA12FDB0A60076E9FF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1580703712FD8159008A7013 /* libAmbianceClient-Mac.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAmbianceClient-Mac.a";
 			remoteRef = 1580703612FD8159008A7013 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		15E5567E12FD92A300327CFE /* libAmbianceClient-Mac copy.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libAmbianceClient-Mac copy.a";
-			remoteRef = 15E5567D12FD92A300327CFE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -261,6 +275,7 @@
 				15B08B9B12FD5E8A00BA0A0A /* main.m in Sources */,
 				15B08BA112FD5E8A00BA0A0A /* AmbianceAppDelegate.m in Sources */,
 				1580702B12FD7BB2008A7013 /* AmbianceSource_iTunes.m in Sources */,
+				151D84DE12FDB0DD0076E9FF /* AmbianceSource_AudioBoxFM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

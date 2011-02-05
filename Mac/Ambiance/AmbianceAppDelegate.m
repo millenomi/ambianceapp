@@ -10,6 +10,7 @@
 
 #import "AmbianceBackend.h"
 #import "AmbianceSource_iTunes.h"
+#import "AmbianceSource_AudioBoxFM.h"
 
 #import "SBJSON/JSON.h"
 
@@ -19,6 +20,7 @@
 @property(retain) AmbianceBackend* backend;
 
 @property(retain) AmbianceSource_iTunes* iTunes;
+@property(retain) AmbianceSource_AudioBoxFM* audioBox;
 
 @property(retain) NSTimer* resignTimer;
 
@@ -30,7 +32,7 @@
 @synthesize statusItemMenu;
 @synthesize backend;
 @synthesize window, statusItem;
-@synthesize iTunes, resignTimer;
+@synthesize iTunes, audioBox, resignTimer;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -39,6 +41,7 @@
     self.backend = [[AmbianceBackend alloc] initWithURL:url clientIdentifier:[[NSHost currentHost] localizedName]];
     
     self.iTunes = [[AmbianceSource_iTunes alloc] initWithBackend:self.backend];
+	self.audioBox = [[AmbianceSource_AudioBoxFM alloc] initWithBackend:self.backend];
     
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:20.0];
     [self.statusItem setImage:[NSImage imageNamed:@"StatusIcon"]];
@@ -46,6 +49,12 @@
     [self.statusItem setMenu:self.statusItemMenu];
     
     self.resignTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(checkResigning:) userInfo:nil repeats:YES];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag;
+{
+    [self.window makeKeyAndOrderFront:self];
+    return YES;
 }
 
 - (IBAction)returnHere:(id)sender;
@@ -85,6 +94,7 @@
             if (client && ![self.backend.clientIdentifier isEqual:client]) {
                 // RESIGN!
                 [self.iTunes resign];
+				[self.audioBox resign];
             }
         }
     }];

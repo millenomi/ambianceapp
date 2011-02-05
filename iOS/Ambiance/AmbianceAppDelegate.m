@@ -39,6 +39,7 @@
     self.resignTimer = [[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(checkResignation:) userInfo:nil repeats:YES] retain];
     
     [self.window makeKeyAndVisible];
+    [self returnHere];
     return YES;
 }
 
