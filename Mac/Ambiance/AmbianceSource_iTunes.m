@@ -16,6 +16,7 @@
 @interface AmbianceSource_iTunes () 
 
 @property(retain) AmbianceBackend* backend;
+- (void) updateStateWithNotification:(NSNotification*) n;
 
 @end
 
@@ -41,6 +42,20 @@
     NSLog(@"%@", [n userInfo]);
     NSString* playerState = [[n userInfo] objectForKey:@"Player State"];
     
+    if ([playerState isEqualToString:@"Playing"]) {
+        [self.backend takeOverServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse* resp, NSData* data) {
+            
+            [self updateStateWithNotification:n];
+            
+        }];
+    } else {
+        [self updateStateWithNotification:n];
+    }
+}
+
+- (void) updateStateWithNotification:(NSNotification*) n;
+{
+    NSString* playerState = [[n userInfo] objectForKey:@"Player State"];
     NSMutableDictionary* state = [NSMutableDictionary dictionary];
     
     if ([playerState isEqualToString:@"Playing"]) {
@@ -51,7 +66,7 @@
 		
 		if ((x = [[n userInfo] objectForKey:@"Album"]))
 			[state setObject:x forKey:@"albumName"];
-
+        
 		if ((x = [[n userInfo] objectForKey:@"Album Artist"]))
 			[state setObject:x forKey:@"albumArtist"];
 		

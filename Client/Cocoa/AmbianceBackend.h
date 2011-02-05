@@ -22,4 +22,6 @@ typedef void (^AmbianceResponse)(NSHTTPURLResponse* resp, NSData* data);
 
 - (void) postState:(NSDictionary*) state toServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
 
+- (void) takeOverServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
+
 @end

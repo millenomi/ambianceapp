@@ -74,7 +74,22 @@
     
     NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
     [self.runningURLConnections addObject:con];
-    [self.ifSucceedsBlocks setObject:done forKey:[NSValue valueWithNonretainedObject:con]];
+    [self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
+}
+
+- (void) takeOverServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
+{
+    NSString* url = [NSString stringWithFormat:@"services/%@/takeover", ident];
+    
+    NSMutableURLRequest* req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url relativeToURL:self.URL]];
+    
+    [req setHTTPMethod:@"POST"];
+    [req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [req setHTTPBody:[[NSString stringWithFormat:@"clientName=%@", self.clientIdentifier] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+    [self.runningURLConnections addObject:con];
+    [self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
 }
 
 - (void)connection:(NSURLConnection *) con didFailWithError:(NSError *)error;
