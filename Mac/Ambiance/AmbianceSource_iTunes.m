@@ -88,4 +88,15 @@
     }];
 }
 
+- (void) resign;
+{
+    iTApplication* itunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    if (![itunes isRunning])
+        return;
+    
+    iTEPlS state = itunes.playerState;
+    if (state != iTEPlSPaused && state != iTEPlSStopped)
+        [itunes pause];
+}
+
 @end

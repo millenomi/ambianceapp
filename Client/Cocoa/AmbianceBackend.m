@@ -84,6 +84,13 @@
     [self fetchURLRequest:req ifSucceeds:done];
 }
 
+- (void) fetchStateOfServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
+{
+    NSString* url = [NSString stringWithFormat:@"services/%@", ident];
+    
+    [self fetchURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url relativeToURL:self.URL]] ifSucceeds:done];
+}
+
 - (void) takeOverServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
 {
     NSString* url = [NSString stringWithFormat:@"services/%@/takeover", ident];

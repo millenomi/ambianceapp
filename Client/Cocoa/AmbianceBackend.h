@@ -18,10 +18,14 @@ typedef void (^AmbianceResponse)(NSHTTPURLResponse* resp, NSData* data);
 }
 
 @property(readonly, retain) NSURL* URL;
+@property(readonly, copy) NSString* clientIdentifier;
+
 - (id)initWithURL:(NSURL*) url clientIdentifier:(NSString*) clientId;
 
 - (void) postState:(NSDictionary*) state toServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
 
 - (void) takeOverServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
+
+- (void) fetchStateOfServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
 
 @end

@@ -16,5 +16,6 @@
 }
 
 - (id)initWithBackend:(AmbianceBackend*) backend;
+- (void) resign;
 
 @end

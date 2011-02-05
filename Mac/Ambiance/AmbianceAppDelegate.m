@@ -11,12 +11,16 @@
 #import "AmbianceBackend.h"
 #import "AmbianceSource_iTunes.h"
 
+#import "SBJSON/JSON.h"
+
 @interface AmbianceAppDelegate ()
 
 @property(retain) NSStatusItem* statusItem;
 @property(retain) AmbianceBackend* backend;
 
 @property(retain) AmbianceSource_iTunes* iTunes;
+
+@property(retain) NSTimer* resignTimer;
 
 @end
 
@@ -26,7 +30,7 @@
 @synthesize statusItemMenu;
 @synthesize backend;
 @synthesize window, statusItem;
-@synthesize iTunes;
+@synthesize iTunes, resignTimer;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -40,11 +44,36 @@
     [self.statusItem setImage:[NSImage imageNamed:@"StatusIcon"]];
     [self.statusItem setAlternateImage:[NSImage imageNamed:@"StatusIcon-Highlighted"]];
     [self.statusItem setMenu:self.statusItemMenu];
+    
+    self.resignTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(checkResigning:) userInfo:nil repeats:YES];
 }
 
 - (IBAction)returnHere:(id)sender;
 {
     
+}
+
+- (void) checkResigning:(NSTimer*) t;
+{
+    [self.backend fetchStateOfServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse *resp, NSData *data) {
+        
+        if ([resp statusCode] >= 400)
+            return;
+        
+        NSString* jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if (!jsonString)
+            return;
+        
+        id x = [jsonString JSONValue];
+        if ([x isKindOfClass:[NSDictionary class]]) {
+            id client = [x objectForKey:@"takingOverClient"];
+            
+            if (client && ![self.backend.clientIdentifier isEqual:client]) {
+                // RESIGN!
+                [self.iTunes resign];
+            }
+        }
+    }];
 }
 
 @end
