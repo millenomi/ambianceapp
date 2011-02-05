@@ -42,6 +42,25 @@
     return YES;
 }
 
+- (IBAction) returnHere;
+{
+    [self.backend fetchStateOfServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse *resp, NSData *data) {
+        NSString* jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if (!jsonString)
+            return;
+        
+        id x = [jsonString JSONValue];
+        if (![x isKindOfClass:[NSDictionary class]])
+            return;
+        
+        [self.backend takeOverServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse *resp, NSData *data) {
+            
+            [self.iPod takeOverWithTrackForState:[x objectForKey:@"state"]];
+            
+        }];
+    }];
+}
+
 - (void) checkResignation:(NSTimer*) timer;
 {
     [self.backend fetchStateOfServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse *resp, NSData *data) {

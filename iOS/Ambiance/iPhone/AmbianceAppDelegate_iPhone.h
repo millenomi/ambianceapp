@@ -11,6 +11,8 @@
 
 @interface AmbianceAppDelegate_iPhone : AmbianceAppDelegate {
     
+    UIButton *returnButton;
 }
+@property (nonatomic, retain) IBOutlet UIButton *returnButton;
 
 @end

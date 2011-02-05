@@ -97,4 +97,37 @@
         [ipod pause];
 }
 
+- (void) takeOverWithTrackForState:(NSDictionary*) state;
+{
+    NSString* name = [state objectForKey:@"trackName"];
+    NSString* album = [state objectForKey:@"albumName"];
+    
+    // <#TODO#>
+    if (!name || !album)
+        return;
+    
+    NSSet* preds = [NSSet setWithObjects:
+                    [MPMediaPropertyPredicate predicateWithValue:name forProperty:MPMediaItemPropertyTitle],
+                    [MPMediaPropertyPredicate predicateWithValue:album forProperty:MPMediaItemPropertyAlbumTitle],                    
+                    nil];
+    
+    MPMediaQuery* query = [[[MPMediaQuery alloc] initWithFilterPredicates:preds] autorelease];
+    
+    // Yes, it's ugly, but this way we don't call -count, giving mpmq an opportunity to limit fetches.
+    MPMediaItem* item = nil;;
+    for (MPMediaItem* i in query.items) {
+        item = i;
+        break;
+    }
+    
+    if (!item)
+        return;
+    
+    MPMusicPlayerController* ipod = [MPMusicPlayerController iPodMusicPlayer];
+    [ipod setQueueWithQuery:[MPMediaQuery songsQuery]];
+    ipod.nowPlayingItem = item;
+    ipod.currentPlaybackTime = 0;
+    [ipod play];
+}
+
 @end

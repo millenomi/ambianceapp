@@ -18,4 +18,6 @@
 - (id)initWithBackend:(AmbianceBackend*) b;
 - (void) resign;
 
+- (void) takeOverWithTrackForState:(NSDictionary*) state;
+
 @end
