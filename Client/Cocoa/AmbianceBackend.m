@@ -19,6 +19,8 @@
 
 @property(retain) NSMutableDictionary* responses, * data;
 
+- (void) fetchURLRequest:(NSURLRequest*) req ifSucceeds:(AmbianceResponse) done;
+
 @end
 
 
@@ -59,6 +61,13 @@
 }
 
 
+- (void) fetchURLRequest:(NSURLRequest*) req ifSucceeds:(AmbianceResponse) done;
+{
+    NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+    [self.runningURLConnections addObject:con];
+    [self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
+}
+
 - (void) postState:(NSDictionary*) state toServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
 {
     NSString* str = [state JSONRepresentation];
@@ -72,9 +81,7 @@
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [req setHTTPBody:JSONData];
     
-    NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-    [self.runningURLConnections addObject:con];
-    [self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
+    [self fetchURLRequest:req ifSucceeds:done];
 }
 
 - (void) takeOverServiceWithIdentifier:(NSString*) ident ifSucceeds:(AmbianceResponse) done;
@@ -87,9 +94,7 @@
     [req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [req setHTTPBody:[[NSString stringWithFormat:@"clientName=%@", self.clientIdentifier] dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-    [self.runningURLConnections addObject:con];
-    [self.ifSucceedsBlocks setObject:[[done copy] autorelease] forKey:[NSValue valueWithNonretainedObject:con]];
+    [self fetchURLRequest:req ifSucceeds:done];
 }
 
 - (void)connection:(NSURLConnection *) con didFailWithError:(NSError *)error;
