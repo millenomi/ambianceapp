@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		159019D312FD64D9007D7AE7 /* StatusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D212FD64D9007D7AE7 /* StatusIcon.pdf */; };
+		159019D512FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */; };
+		15901A1712FD6A4A007D7AE7 /* libAmbianceClient-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */; };
+		15B08B8E12FD5E8A00BA0A0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B08B8D12FD5E8A00BA0A0A /* Cocoa.framework */; };
+		15B08B9812FD5E8A00BA0A0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15B08B9612FD5E8A00BA0A0A /* InfoPlist.strings */; };
+		15B08B9B12FD5E8A00BA0A0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B08B9A12FD5E8A00BA0A0A /* main.m */; };
+		15B08B9E12FD5E8A00BA0A0A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 15B08B9C12FD5E8A00BA0A0A /* Credits.rtf */; };
+		15B08BA112FD5E8A00BA0A0A /* AmbianceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */; };
+		15B08BA412FD5E8B00BA0A0A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		159019D212FD64D9007D7AE7 /* StatusIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = StatusIcon.pdf; path = Art/StatusIcon.pdf; sourceTree = SOURCE_ROOT; };
+		159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "StatusIcon-Highlighted.pdf"; path = "Art/StatusIcon-Highlighted.pdf"; sourceTree = SOURCE_ROOT; };
+		15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libAmbianceClient-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B08B8912FD5E8A00BA0A0A /* Ambiance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambiance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B08B8D12FD5E8A00BA0A0A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		15B08B9012FD5E8A00BA0A0A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		15B08B9112FD5E8A00BA0A0A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		15B08B9212FD5E8A00BA0A0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15B08B9512FD5E8A00BA0A0A /* Ambiance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ambiance-Info.plist"; sourceTree = "<group>"; };
+		15B08B9712FD5E8A00BA0A0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15B08B9912FD5E8A00BA0A0A /* Ambiance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ambiance-Prefix.pch"; sourceTree = "<group>"; };
+		15B08B9A12FD5E8A00BA0A0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15B08B9D12FD5E8A00BA0A0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		15B08B9F12FD5E8A00BA0A0A /* AmbianceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbianceAppDelegate.h; sourceTree = "<group>"; };
+		15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbianceAppDelegate.m; sourceTree = "<group>"; };
+		15B08BA312FD5E8B00BA0A0A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15B08B8612FD5E8A00BA0A0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B08B8E12FD5E8A00BA0A0A /* Cocoa.framework in Frameworks */,
+				15901A1712FD6A4A007D7AE7 /* libAmbianceClient-Mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		159019D612FD65B5007D7AE7 /* Status Icon */ = {
+			isa = PBXGroup;
+			children = (
+				159019D212FD64D9007D7AE7 /* StatusIcon.pdf */,
+				159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */,
+			);
+			name = "Status Icon";
+			sourceTree = "<group>";
+		};
+		15B08B7E12FD5E8A00BA0A0A = {
+			isa = PBXGroup;
+			children = (
+				15B08B9312FD5E8A00BA0A0A /* Ambiance */,
+				15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */,
+				15B08B8C12FD5E8A00BA0A0A /* Frameworks */,
+				15B08B8A12FD5E8A00BA0A0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15B08B8A12FD5E8A00BA0A0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15B08B8912FD5E8A00BA0A0A /* Ambiance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15B08B8C12FD5E8A00BA0A0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15B08B8D12FD5E8A00BA0A0A /* Cocoa.framework */,
+				15B08B8F12FD5E8A00BA0A0A /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15B08B8F12FD5E8A00BA0A0A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15B08B9012FD5E8A00BA0A0A /* AppKit.framework */,
+				15B08B9112FD5E8A00BA0A0A /* CoreData.framework */,
+				15B08B9212FD5E8A00BA0A0A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		15B08B9312FD5E8A00BA0A0A /* Ambiance */ = {
+			isa = PBXGroup;
+			children = (
+				15B08B9F12FD5E8A00BA0A0A /* AmbianceAppDelegate.h */,
+				15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */,
+				15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */,
+				15B08B9412FD5E8A00BA0A0A /* Supporting Files */,
+			);
+			path = Ambiance;
+			sourceTree = "<group>";
+		};
+		15B08B9412FD5E8A00BA0A0A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				159019D612FD65B5007D7AE7 /* Status Icon */,
+				15B08B9512FD5E8A00BA0A0A /* Ambiance-Info.plist */,
+				15B08B9612FD5E8A00BA0A0A /* InfoPlist.strings */,
+				15B08B9912FD5E8A00BA0A0A /* Ambiance-Prefix.pch */,
+				15B08B9A12FD5E8A00BA0A0A /* main.m */,
+				15B08B9C12FD5E8A00BA0A0A /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15B08B8812FD5E8A00BA0A0A /* Ambiance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15B08BA712FD5E8B00BA0A0A /* Build configuration list for PBXNativeTarget "Ambiance" */;
+			buildPhases = (
+				15B08B8512FD5E8A00BA0A0A /* Sources */,
+				15B08B8612FD5E8A00BA0A0A /* Frameworks */,
+				15B08B8712FD5E8A00BA0A0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ambiance;
+			productName = Ambiance;
+			productReference = 15B08B8912FD5E8A00BA0A0A /* Ambiance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15B08B8012FD5E8A00BA0A0A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 15B08B8312FD5E8A00BA0A0A /* Build configuration list for PBXProject "Ambiance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15B08B7E12FD5E8A00BA0A0A;
+			productRefGroup = 15B08B8A12FD5E8A00BA0A0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15B08B8812FD5E8A00BA0A0A /* Ambiance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15B08B8712FD5E8A00BA0A0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B08B9812FD5E8A00BA0A0A /* InfoPlist.strings in Resources */,
+				15B08B9E12FD5E8A00BA0A0A /* Credits.rtf in Resources */,
+				15B08BA412FD5E8B00BA0A0A /* MainMenu.xib in Resources */,
+				159019D312FD64D9007D7AE7 /* StatusIcon.pdf in Resources */,
+				159019D512FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15B08B8512FD5E8A00BA0A0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B08B9B12FD5E8A00BA0A0A /* main.m in Sources */,
+				15B08BA112FD5E8A00BA0A0A /* AmbianceAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15B08B9612FD5E8A00BA0A0A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15B08B9712FD5E8A00BA0A0A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		15B08B9C12FD5E8A00BA0A0A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15B08B9D12FD5E8A00BA0A0A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15B08BA312FD5E8B00BA0A0A /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15B08BA512FD5E8B00BA0A0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		15B08BA612FD5E8B00BA0A0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		15B08BA812FD5E8B00BA0A0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ambiance/Ambiance-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Client/Cocoa";
+				INFOPLIST_FILE = "Ambiance/Ambiance-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		15B08BA912FD5E8B00BA0A0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ambiance/Ambiance-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Client/Cocoa";
+				INFOPLIST_FILE = "Ambiance/Ambiance-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15B08B8312FD5E8A00BA0A0A /* Build configuration list for PBXProject "Ambiance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B08BA512FD5E8B00BA0A0A /* Debug */,
+				15B08BA612FD5E8B00BA0A0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15B08BA712FD5E8B00BA0A0A /* Build configuration list for PBXNativeTarget "Ambiance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B08BA812FD5E8B00BA0A0A /* Debug */,
+				15B08BA912FD5E8B00BA0A0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15B08B8012FD5E8A00BA0A0A /* Project object */;
+}

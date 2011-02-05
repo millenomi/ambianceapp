@@ -2,7 +2,10 @@ package net.infinite_labs.here;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.restlet.representation.Representation;
 import org.restlet.resource.Get;
+import org.restlet.resource.Post;
+import org.restlet.resource.Put;
 import org.restlet.resource.ResourceException;
 
 import net.infinite_labs.here.Here;
@@ -43,5 +46,21 @@ public class ServiceStateResource extends Here.Resource {
 	@Get("json")
 	public String toJSON() throws Exception {
 		return stateOfService(app().servicesMap().serviceNamed(name)).toString();
+	}
+	
+	@Post
+	@Put
+	public Representation fromJSON(Representation json) throws Exception {
+		if (json.getSize() == Representation.UNKNOWN_SIZE || json.getSize() > 1024 * 1024) {
+			return badRequest("Resource too large or with unknown size");
+		}
+		
+		JSONObject o = new JSONObject(json.getText());
+		
+		Service s = app().servicesMap().serviceNamed(name);
+		s.setState(o);
+		
+		redirectSeeOther(this.getReference());
+		return null;
 	}
 }

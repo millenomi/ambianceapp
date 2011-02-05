@@ -1,1 +1,15 @@
 .DS_Store
+*.xcworkspace
+
+# Mac folder metadata
+.DS_Store
+
+# Xcode 3 stuff
+build
+*.mode2v3
+*.pbxuser
+*.perspectivev3
+
+# Xcode 4 stuff
+*.xcworkspace
+xcuserdata

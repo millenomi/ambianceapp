@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		159019E612FD6708007D7AE7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159019E512FD6708007D7AE7 /* Cocoa.framework */; };
+		15901A0012FD686C007D7AE7 /* AmbianceBackend.h in Headers */ = {isa = PBXBuildFile; fileRef = 159019FD12FD686C007D7AE7 /* AmbianceBackend.h */; };
+		15901A0112FD686C007D7AE7 /* AmbianceBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 159019FE12FD686C007D7AE7 /* AmbianceBackend.m */; };
+		15901A0212FD686C007D7AE7 /* AmbianceClient-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 159019FF12FD686C007D7AE7 /* AmbianceClient-Prefix.pch */; };
+		15901A3012FD6B1D007D7AE7 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 15901A2912FD6B1D007D7AE7 /* JSON.h */; };
+		15901A3112FD6B1D007D7AE7 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 15901A2A12FD6B1D007D7AE7 /* NSObject+SBJSON.h */; };
+		15901A3212FD6B1D007D7AE7 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 15901A2B12FD6B1D007D7AE7 /* NSObject+SBJSON.m */; };
+		15901A3312FD6B1D007D7AE7 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 15901A2C12FD6B1D007D7AE7 /* NSString+SBJSON.h */; };
+		15901A3412FD6B1D007D7AE7 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 15901A2D12FD6B1D007D7AE7 /* NSString+SBJSON.m */; };
+		15901A3512FD6B1D007D7AE7 /* SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 15901A2E12FD6B1D007D7AE7 /* SBJSON.h */; };
+		15901A3612FD6B1D007D7AE7 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 15901A2F12FD6B1D007D7AE7 /* SBJSON.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		159019E212FD6708007D7AE7 /* libAmbianceClient-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAmbianceClient-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		159019E512FD6708007D7AE7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		159019E812FD6708007D7AE7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		159019E912FD6708007D7AE7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		159019EA12FD6708007D7AE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		159019FD12FD686C007D7AE7 /* AmbianceBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbianceBackend.h; sourceTree = "<group>"; };
+		159019FE12FD686C007D7AE7 /* AmbianceBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbianceBackend.m; sourceTree = "<group>"; };
+		159019FF12FD686C007D7AE7 /* AmbianceClient-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AmbianceClient-Prefix.pch"; sourceTree = "<group>"; };
+		15901A2912FD6B1D007D7AE7 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		15901A2A12FD6B1D007D7AE7 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		15901A2B12FD6B1D007D7AE7 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		15901A2C12FD6B1D007D7AE7 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		15901A2D12FD6B1D007D7AE7 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		15901A2E12FD6B1D007D7AE7 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		15901A2F12FD6B1D007D7AE7 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		159019DF12FD6708007D7AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				159019E612FD6708007D7AE7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		159019D712FD6707007D7AE7 = {
+			isa = PBXGroup;
+			children = (
+				15901A2812FD6B1D007D7AE7 /* SBJSON */,
+				159019FD12FD686C007D7AE7 /* AmbianceBackend.h */,
+				159019FE12FD686C007D7AE7 /* AmbianceBackend.m */,
+				159019FF12FD686C007D7AE7 /* AmbianceClient-Prefix.pch */,
+				159019E412FD6708007D7AE7 /* Frameworks */,
+				159019E312FD6708007D7AE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		159019E312FD6708007D7AE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				159019E212FD6708007D7AE7 /* libAmbianceClient-Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		159019E412FD6708007D7AE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159019E512FD6708007D7AE7 /* Cocoa.framework */,
+				159019E712FD6708007D7AE7 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		159019E712FD6708007D7AE7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159019E812FD6708007D7AE7 /* AppKit.framework */,
+				159019E912FD6708007D7AE7 /* CoreData.framework */,
+				159019EA12FD6708007D7AE7 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		15901A2812FD6B1D007D7AE7 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				15901A2912FD6B1D007D7AE7 /* JSON.h */,
+				15901A2A12FD6B1D007D7AE7 /* NSObject+SBJSON.h */,
+				15901A2B12FD6B1D007D7AE7 /* NSObject+SBJSON.m */,
+				15901A2C12FD6B1D007D7AE7 /* NSString+SBJSON.h */,
+				15901A2D12FD6B1D007D7AE7 /* NSString+SBJSON.m */,
+				15901A2E12FD6B1D007D7AE7 /* SBJSON.h */,
+				15901A2F12FD6B1D007D7AE7 /* SBJSON.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		159019E012FD6708007D7AE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15901A0012FD686C007D7AE7 /* AmbianceBackend.h in Headers */,
+				15901A0212FD686C007D7AE7 /* AmbianceClient-Prefix.pch in Headers */,
+				15901A3012FD6B1D007D7AE7 /* JSON.h in Headers */,
+				15901A3112FD6B1D007D7AE7 /* NSObject+SBJSON.h in Headers */,
+				15901A3312FD6B1D007D7AE7 /* NSString+SBJSON.h in Headers */,
+				15901A3512FD6B1D007D7AE7 /* SBJSON.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		159019E112FD6708007D7AE7 /* AmbianceClient-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 159019F012FD6708007D7AE7 /* Build configuration list for PBXNativeTarget "AmbianceClient-Mac" */;
+			buildPhases = (
+				159019DE12FD6708007D7AE7 /* Sources */,
+				159019DF12FD6708007D7AE7 /* Frameworks */,
+				159019E012FD6708007D7AE7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AmbianceClient-Mac";
+			productName = AmbianceClient;
+			productReference = 159019E212FD6708007D7AE7 /* libAmbianceClient-Mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		159019D912FD6707007D7AE7 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 159019DC12FD6707007D7AE7 /* Build configuration list for PBXProject "AmbianceClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 159019D712FD6707007D7AE7;
+			productRefGroup = 159019E312FD6708007D7AE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				159019E112FD6708007D7AE7 /* AmbianceClient-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		159019DE12FD6708007D7AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15901A0112FD686C007D7AE7 /* AmbianceBackend.m in Sources */,
+				15901A3212FD6B1D007D7AE7 /* NSObject+SBJSON.m in Sources */,
+				15901A3412FD6B1D007D7AE7 /* NSString+SBJSON.m in Sources */,
+				15901A3612FD6B1D007D7AE7 /* SBJSON.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		159019EE12FD6708007D7AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		159019EF12FD6708007D7AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		159019F112FD6708007D7AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AmbianceClient-Prefix.pch";
+				PRODUCT_NAME = "AmbianceClient-Mac";
+			};
+			name = Debug;
+		};
+		159019F212FD6708007D7AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AmbianceClient-Prefix.pch";
+				PRODUCT_NAME = "AmbianceClient-Mac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		159019DC12FD6707007D7AE7 /* Build configuration list for PBXProject "AmbianceClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				159019EE12FD6708007D7AE7 /* Debug */,
+				159019EF12FD6708007D7AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		159019F012FD6708007D7AE7 /* Build configuration list for PBXNativeTarget "AmbianceClient-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				159019F112FD6708007D7AE7 /* Debug */,
+				159019F212FD6708007D7AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 159019D912FD6707007D7AE7 /* Project object */;
+}
