@@ -35,6 +35,13 @@
 			remoteGlobalIDString = 159019E112FD6708007D7AE7;
 			remoteInfo = "AmbianceClient-Mac";
 		};
+		15E5567D12FD92A300327CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 15E5567B12FD92A300327CFE;
+			remoteInfo = "AmbianceClient-Mac copy";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1580703712FD8159008A7013 /* libAmbianceClient-Mac.a */,
+				15E5567E12FD92A300327CFE /* libAmbianceClient-Mac copy.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +227,13 @@
 			fileType = archive.ar;
 			path = "libAmbianceClient-Mac.a";
 			remoteRef = 1580703612FD8159008A7013 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		15E5567E12FD92A300327CFE /* libAmbianceClient-Mac copy.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAmbianceClient-Mac copy.a";
+			remoteRef = 15E5567D12FD92A300327CFE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15E5563A12FD926A00327CFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E5563912FD926A00327CFE /* UIKit.framework */; };
+		15E5563C12FD926A00327CFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E5563B12FD926A00327CFE /* Foundation.framework */; };
+		15E5563E12FD926A00327CFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E5563D12FD926A00327CFE /* CoreGraphics.framework */; };
+		15E5564412FD926A00327CFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E5564212FD926A00327CFE /* InfoPlist.strings */; };
+		15E5564712FD926A00327CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E5564612FD926A00327CFE /* main.m */; };
+		15E5564A12FD926A00327CFE /* AmbianceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E5564912FD926A00327CFE /* AmbianceAppDelegate.m */; };
+		15E5564E12FD926A00327CFE /* AmbianceAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E5564D12FD926A00327CFE /* AmbianceAppDelegate_iPhone.m */; };
+		15E5565112FD926A00327CFE /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15E5564F12FD926A00327CFE /* MainWindow_iPhone.xib */; };
+		15E5565512FD926A00327CFE /* AmbianceAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E5565412FD926A00327CFE /* AmbianceAppDelegate_iPad.m */; };
+		15E5565812FD926A00327CFE /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15E5565612FD926A00327CFE /* MainWindow_iPad.xib */; };
+		15E5568012FD92EC00327CFE /* libAmbianceClient-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E5567F12FD92EC00327CFE /* libAmbianceClient-iOS.a */; };
+		15E5569012FD957400327CFE /* AmbianceSource_iPod.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E5568F12FD957400327CFE /* AmbianceSource_iPod.m */; };
+		15E5569212FD95D700327CFE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E5569112FD95D700327CFE /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15E5568712FD934700327CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15E5568212FD934700327CFE /* AmbianceClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 159019E212FD6708007D7AE7;
+			remoteInfo = "AmbianceClient-Mac";
+		};
+		15E5568912FD934700327CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15E5568212FD934700327CFE /* AmbianceClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 15E5567B12FD92A300327CFE;
+			remoteInfo = "AmbianceClient-iOS";
+		};
+		15E5568B12FD934E00327CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15E5568212FD934700327CFE /* AmbianceClient.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E5566912FD92A300327CFE;
+			remoteInfo = "AmbianceClient-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15E5563512FD926A00327CFE /* Ambiance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambiance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E5563912FD926A00327CFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		15E5563B12FD926A00327CFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15E5563D12FD926A00327CFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		15E5564112FD926A00327CFE /* Ambiance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ambiance-Info.plist"; sourceTree = "<group>"; };
+		15E5564312FD926A00327CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15E5564512FD926A00327CFE /* Ambiance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ambiance-Prefix.pch"; sourceTree = "<group>"; };
+		15E5564612FD926A00327CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15E5564812FD926A00327CFE /* AmbianceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbianceAppDelegate.h; sourceTree = "<group>"; };
+		15E5564912FD926A00327CFE /* AmbianceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbianceAppDelegate.m; sourceTree = "<group>"; };
+		15E5564C12FD926A00327CFE /* AmbianceAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AmbianceAppDelegate_iPhone.h; path = iPhone/AmbianceAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		15E5564D12FD926A00327CFE /* AmbianceAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AmbianceAppDelegate_iPhone.m; path = iPhone/AmbianceAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		15E5565012FD926A00327CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		15E5565312FD926A00327CFE /* AmbianceAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AmbianceAppDelegate_iPad.h; path = iPad/AmbianceAppDelegate_iPad.h; sourceTree = "<group>"; };
+		15E5565412FD926A00327CFE /* AmbianceAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AmbianceAppDelegate_iPad.m; path = iPad/AmbianceAppDelegate_iPad.m; sourceTree = "<group>"; };
+		15E5565712FD926A00327CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		15E5567F12FD92EC00327CFE /* libAmbianceClient-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libAmbianceClient-iOS.a"; sourceTree = SOURCE_ROOT; };
+		15E5568212FD934700327CFE /* AmbianceClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmbianceClient.xcodeproj; path = ../Client/Cocoa/AmbianceClient.xcodeproj; sourceTree = "<group>"; };
+		15E5568E12FD957400327CFE /* AmbianceSource_iPod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbianceSource_iPod.h; sourceTree = "<group>"; };
+		15E5568F12FD957400327CFE /* AmbianceSource_iPod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbianceSource_iPod.m; sourceTree = "<group>"; };
+		15E5569112FD95D700327CFE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15E5563212FD926A00327CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E5569212FD95D700327CFE /* MediaPlayer.framework in Frameworks */,
+				15E5563A12FD926A00327CFE /* UIKit.framework in Frameworks */,
+				15E5563C12FD926A00327CFE /* Foundation.framework in Frameworks */,
+				15E5563E12FD926A00327CFE /* CoreGraphics.framework in Frameworks */,
+				15E5568012FD92EC00327CFE /* libAmbianceClient-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15E5562A12FD926A00327CFE = {
+			isa = PBXGroup;
+			children = (
+				15E5569112FD95D700327CFE /* MediaPlayer.framework */,
+				15E5568212FD934700327CFE /* AmbianceClient.xcodeproj */,
+				15E5563F12FD926A00327CFE /* Ambiance */,
+				15E5563812FD926A00327CFE /* Frameworks */,
+				15E5563612FD926A00327CFE /* Products */,
+				15E5567F12FD92EC00327CFE /* libAmbianceClient-iOS.a */,
+			);
+			sourceTree = "<group>";
+		};
+		15E5563612FD926A00327CFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15E5563512FD926A00327CFE /* Ambiance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15E5563812FD926A00327CFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15E5563912FD926A00327CFE /* UIKit.framework */,
+				15E5563B12FD926A00327CFE /* Foundation.framework */,
+				15E5563D12FD926A00327CFE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15E5563F12FD926A00327CFE /* Ambiance */ = {
+			isa = PBXGroup;
+			children = (
+				15E5568D12FD956000327CFE /* Media Player */,
+				15E5564812FD926A00327CFE /* AmbianceAppDelegate.h */,
+				15E5564912FD926A00327CFE /* AmbianceAppDelegate.m */,
+				15E5564B12FD926A00327CFE /* iPhone */,
+				15E5565212FD926A00327CFE /* iPad */,
+				15E5564012FD926A00327CFE /* Supporting Files */,
+			);
+			path = Ambiance;
+			sourceTree = "<group>";
+		};
+		15E5564012FD926A00327CFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15E5564112FD926A00327CFE /* Ambiance-Info.plist */,
+				15E5564212FD926A00327CFE /* InfoPlist.strings */,
+				15E5564512FD926A00327CFE /* Ambiance-Prefix.pch */,
+				15E5564612FD926A00327CFE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15E5564B12FD926A00327CFE /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				15E5564C12FD926A00327CFE /* AmbianceAppDelegate_iPhone.h */,
+				15E5564D12FD926A00327CFE /* AmbianceAppDelegate_iPhone.m */,
+				15E5564F12FD926A00327CFE /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		15E5565212FD926A00327CFE /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				15E5565312FD926A00327CFE /* AmbianceAppDelegate_iPad.h */,
+				15E5565412FD926A00327CFE /* AmbianceAppDelegate_iPad.m */,
+				15E5565612FD926A00327CFE /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		15E5568312FD934700327CFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15E5568812FD934700327CFE /* libAmbianceClient-Mac.a */,
+				15E5568A12FD934700327CFE /* libAmbianceClient-iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15E5568D12FD956000327CFE /* Media Player */ = {
+			isa = PBXGroup;
+			children = (
+				15E5568E12FD957400327CFE /* AmbianceSource_iPod.h */,
+				15E5568F12FD957400327CFE /* AmbianceSource_iPod.m */,
+			);
+			name = "Media Player";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15E5563412FD926A00327CFE /* Ambiance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E5565B12FD926A00327CFE /* Build configuration list for PBXNativeTarget "Ambiance" */;
+			buildPhases = (
+				15E5563112FD926A00327CFE /* Sources */,
+				15E5563212FD926A00327CFE /* Frameworks */,
+				15E5563312FD926A00327CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15E5568C12FD934E00327CFE /* PBXTargetDependency */,
+			);
+			name = Ambiance;
+			productName = Ambiance;
+			productReference = 15E5563512FD926A00327CFE /* Ambiance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15E5562C12FD926A00327CFE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 15E5562F12FD926A00327CFE /* Build configuration list for PBXProject "Ambiance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15E5562A12FD926A00327CFE;
+			productRefGroup = 15E5563612FD926A00327CFE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 15E5568312FD934700327CFE /* Products */;
+					ProjectRef = 15E5568212FD934700327CFE /* AmbianceClient.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				15E5563412FD926A00327CFE /* Ambiance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		15E5568812FD934700327CFE /* libAmbianceClient-Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAmbianceClient-Mac.a";
+			remoteRef = 15E5568712FD934700327CFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		15E5568A12FD934700327CFE /* libAmbianceClient-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAmbianceClient-iOS.a";
+			remoteRef = 15E5568912FD934700327CFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15E5563312FD926A00327CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E5564412FD926A00327CFE /* InfoPlist.strings in Resources */,
+				15E5565112FD926A00327CFE /* MainWindow_iPhone.xib in Resources */,
+				15E5565812FD926A00327CFE /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15E5563112FD926A00327CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E5564712FD926A00327CFE /* main.m in Sources */,
+				15E5564A12FD926A00327CFE /* AmbianceAppDelegate.m in Sources */,
+				15E5564E12FD926A00327CFE /* AmbianceAppDelegate_iPhone.m in Sources */,
+				15E5565512FD926A00327CFE /* AmbianceAppDelegate_iPad.m in Sources */,
+				15E5569012FD957400327CFE /* AmbianceSource_iPod.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15E5568C12FD934E00327CFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AmbianceClient-iOS";
+			targetProxy = 15E5568B12FD934E00327CFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15E5564212FD926A00327CFE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15E5564312FD926A00327CFE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		15E5564F12FD926A00327CFE /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15E5565012FD926A00327CFE /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		15E5565612FD926A00327CFE /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15E5565712FD926A00327CFE /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15E5565912FD926A00327CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15E5565A12FD926A00327CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15E5565C12FD926A00327CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ambiance/Ambiance-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Client/Cocoa";
+				INFOPLIST_FILE = "Ambiance/Ambiance-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		15E5565D12FD926A00327CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ambiance/Ambiance-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Client/Cocoa";
+				INFOPLIST_FILE = "Ambiance/Ambiance-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15E5562F12FD926A00327CFE /* Build configuration list for PBXProject "Ambiance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E5565912FD926A00327CFE /* Debug */,
+				15E5565A12FD926A00327CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E5565B12FD926A00327CFE /* Build configuration list for PBXNativeTarget "Ambiance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E5565C12FD926A00327CFE /* Debug */,
+				15E5565D12FD926A00327CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15E5562C12FD926A00327CFE /* Project object */;
+}
