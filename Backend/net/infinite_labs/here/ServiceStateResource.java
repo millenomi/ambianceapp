@@ -55,7 +55,9 @@ public class ServiceStateResource extends Here.Resource {
 			return badRequest("Resource too large or with unknown size");
 		}
 		
-		JSONObject o = new JSONObject(json.getText());
+		String jsonString = json.getText();
+		
+		JSONObject o = new JSONObject(jsonString);
 		
 		Service s = app().servicesMap().serviceNamed(name);
 		s.setState(o);

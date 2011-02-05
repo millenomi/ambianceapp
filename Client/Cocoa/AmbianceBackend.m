@@ -72,11 +72,9 @@
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [req setHTTPBody:JSONData];
     
-    NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately:NO];
+    NSURLConnection* con = [[NSURLConnection alloc] initWithRequest:req delegate:self];
     [self.runningURLConnections addObject:con];
     [self.ifSucceedsBlocks setObject:done forKey:[NSValue valueWithNonretainedObject:con]];
-    
-    [con start];
 }
 
 - (void)connection:(NSURLConnection *) con didFailWithError:(NSError *)error;

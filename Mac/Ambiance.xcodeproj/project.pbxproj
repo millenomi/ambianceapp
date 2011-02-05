@@ -8,23 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		1580702B12FD7BB2008A7013 /* AmbianceSource_iTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */; };
+		1580703012FD7E72008A7013 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1580702F12FD7E72008A7013 /* ScriptingBridge.framework */; };
 		159019D312FD64D9007D7AE7 /* StatusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D212FD64D9007D7AE7 /* StatusIcon.pdf */; };
 		159019D512FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */; };
-		15901A1712FD6A4A007D7AE7 /* libAmbianceClient-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */; };
 		15B08B8E12FD5E8A00BA0A0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B08B8D12FD5E8A00BA0A0A /* Cocoa.framework */; };
 		15B08B9812FD5E8A00BA0A0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15B08B9612FD5E8A00BA0A0A /* InfoPlist.strings */; };
 		15B08B9B12FD5E8A00BA0A0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B08B9A12FD5E8A00BA0A0A /* main.m */; };
 		15B08B9E12FD5E8A00BA0A0A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 15B08B9C12FD5E8A00BA0A0A /* Credits.rtf */; };
 		15B08BA112FD5E8A00BA0A0A /* AmbianceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */; };
 		15B08BA412FD5E8B00BA0A0A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */; };
+		15C69ECD12FD81E9007E0B44 /* libAmbianceClient-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1580703712FD8159008A7013 /* libAmbianceClient-Mac.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1580703612FD8159008A7013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 159019E212FD6708007D7AE7;
+			remoteInfo = "AmbianceClient-Mac";
+		};
+		1580703812FD8160008A7013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 159019E112FD6708007D7AE7;
+			remoteInfo = "AmbianceClient-Mac";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1580702912FD7BB2008A7013 /* AmbianceSource_iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbianceSource_iTunes.h; sourceTree = "<group>"; };
 		1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbianceSource_iTunes.m; sourceTree = "<group>"; };
+		1580702D12FD7E01008A7013 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		1580702F12FD7E72008A7013 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmbianceClient.xcodeproj; path = ../Client/Cocoa/AmbianceClient.xcodeproj; sourceTree = "<group>"; };
 		159019D212FD64D9007D7AE7 /* StatusIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = StatusIcon.pdf; path = Art/StatusIcon.pdf; sourceTree = SOURCE_ROOT; };
 		159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "StatusIcon-Highlighted.pdf"; path = "Art/StatusIcon-Highlighted.pdf"; sourceTree = SOURCE_ROOT; };
-		15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libAmbianceClient-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B08B8912FD5E8A00BA0A0A /* Ambiance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambiance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B08B8D12FD5E8A00BA0A0A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		15B08B9012FD5E8A00BA0A0A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -45,14 +65,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C69ECD12FD81E9007E0B44 /* libAmbianceClient-Mac.a in Frameworks */,
+				1580703012FD7E72008A7013 /* ScriptingBridge.framework in Frameworks */,
 				15B08B8E12FD5E8A00BA0A0A /* Cocoa.framework in Frameworks */,
-				15901A1712FD6A4A007D7AE7 /* libAmbianceClient-Mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1580702E12FD7E06008A7013 /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				1580702D12FD7E01008A7013 /* iTunes.h */,
+				1580702912FD7BB2008A7013 /* AmbianceSource_iTunes.h */,
+				1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */,
+			);
+			name = iTunes;
+			sourceTree = "<group>";
+		};
+		1580703312FD8159008A7013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1580703712FD8159008A7013 /* libAmbianceClient-Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		159019D612FD65B5007D7AE7 /* Status Icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +104,9 @@
 		15B08B7E12FD5E8A00BA0A0A = {
 			isa = PBXGroup;
 			children = (
+				1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */,
+				1580702F12FD7E72008A7013 /* ScriptingBridge.framework */,
 				15B08B9312FD5E8A00BA0A0A /* Ambiance */,
-				15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */,
 				15B08B8C12FD5E8A00BA0A0A /* Frameworks */,
 				15B08B8A12FD5E8A00BA0A0A /* Products */,
 			);
@@ -104,8 +144,7 @@
 			children = (
 				15B08B9F12FD5E8A00BA0A0A /* AmbianceAppDelegate.h */,
 				15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */,
-				1580702912FD7BB2008A7013 /* AmbianceSource_iTunes.h */,
-				1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */,
+				1580702E12FD7E06008A7013 /* iTunes */,
 				15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */,
 				15B08B9412FD5E8A00BA0A0A /* Supporting Files */,
 			);
@@ -139,6 +178,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1580703912FD8160008A7013 /* PBXTargetDependency */,
 			);
 			name = Ambiance;
 			productName = Ambiance;
@@ -160,12 +200,28 @@
 			mainGroup = 15B08B7E12FD5E8A00BA0A0A;
 			productRefGroup = 15B08B8A12FD5E8A00BA0A0A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1580703312FD8159008A7013 /* Products */;
+					ProjectRef = 1580703212FD8159008A7013 /* AmbianceClient.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				15B08B8812FD5E8A00BA0A0A /* Ambiance */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1580703712FD8159008A7013 /* libAmbianceClient-Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAmbianceClient-Mac.a";
+			remoteRef = 1580703612FD8159008A7013 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		15B08B8712FD5E8A00BA0A0A /* Resources */ = {
@@ -194,6 +250,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1580703912FD8160008A7013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AmbianceClient-Mac";
+			targetProxy = 1580703812FD8160008A7013 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		15B08B9612FD5E8A00BA0A0A /* InfoPlist.strings */ = {
@@ -230,7 +294,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = 4.2;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -245,7 +309,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = 4.2;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

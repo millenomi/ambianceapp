@@ -10,13 +10,25 @@
 
 #import "AmbianceBackend.h"
 
+#import <ScriptingBridge/ScriptingBridge.h>
+#import "iTunes.h"
+
+@interface AmbianceSource_iTunes () 
+
+@property(retain) AmbianceBackend* backend;
+
+@end
+
 @implementation AmbianceSource_iTunes
 
-- (id)initWithBackend:(AmbianceBackend*) backend;
+@synthesize backend;
+
+- (id)initWithBackend:(AmbianceBackend*) b;
 {
     self = [super init];
     if (self) {
 
+        self.backend = b;
         [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(iTunesDidChangeTrack:) name:@"com.apple.iTunes.playerInfo" object:nil];
     
     }
@@ -26,9 +38,39 @@
 
 - (void) iTunesDidChangeTrack:(NSNotification*) n;
 {
-    // <#TODO#>
-    
     NSLog(@"%@", [n userInfo]);
+    NSString* playerState = [[n userInfo] objectForKey:@"Player State"];
+    
+    NSMutableDictionary* state = [NSMutableDictionary dictionary];
+    
+    if ([playerState isEqualToString:@"Playing"]) {
+		id x;
+		
+		if ((x = [[n userInfo] objectForKey:@"Name"]))
+			[state setObject:x forKey:@"trackName"];
+		
+		if ((x = [[n userInfo] objectForKey:@"Album"]))
+			[state setObject:x forKey:@"albumName"];
+
+		if ((x = [[n userInfo] objectForKey:@"Album Artist"]))
+			[state setObject:x forKey:@"albumArtist"];
+		
+		if ((x = [[n userInfo] objectForKey:@"Track Number"]))
+			[state setObject:x forKey:@"trackNumber"];
+        
+        iTApplication* app = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+        iTPlaylist* playlist = app.currentPlaylist;
+        if (playlist.specialKind == iTESpKNone) {
+            [state setObject:[playlist name] forKey:@"playlistName"];
+            NSInteger i = [[playlist tracks] indexOfObject:[app currentTrack]];
+            if (i != NSNotFound)
+                [state setObject:[NSNumber numberWithInteger:i] forKey:@"indexOfTrackInPlaylist"];
+        }
+    }
+    
+    [self.backend postState:state toServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse *resp, NSData *data) {
+        NSLog(@"Done!");
+    }];
 }
 
 @end

@@ -1,7 +1,11 @@
 package net.infinite_labs.here.ram;
 
 import java.util.Date;
+import java.util.Iterator;
 
+import javax.management.RuntimeErrorException;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import net.infinite_labs.here.Client;
@@ -28,12 +32,28 @@ public class InMemoryService implements Service {
 
 	@Override
 	public synchronized JSONObject state() {
-		return new JSONObject(state);
+		return cloneJSONObject(state);
+	}
+
+	@SuppressWarnings("unchecked")
+	private JSONObject cloneJSONObject(JSONObject x) {
+		JSONObject o = new JSONObject();
+		Iterator<String> i = (Iterator<String>) x.keys();
+		while (i.hasNext()) {
+			String key = i.next();
+			try {
+				o.put(key, x.get(key));
+			} catch (JSONException e) {
+				throw new RuntimeException(e); // should never have happened.
+			}
+		}
+		
+		return o;
 	}
 
 	@Override
 	public synchronized void setState(JSONObject state) {
-		this.state = new JSONObject(state);
+		this.state = cloneJSONObject(state);
 		this.stateTimestamp = new Date();
 	}
 
