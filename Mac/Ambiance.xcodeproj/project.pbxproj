@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1580702B12FD7BB2008A7013 /* AmbianceSource_iTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */; };
 		159019D312FD64D9007D7AE7 /* StatusIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D212FD64D9007D7AE7 /* StatusIcon.pdf */; };
 		159019D512FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */; };
 		15901A1712FD6A4A007D7AE7 /* libAmbianceClient-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1580702912FD7BB2008A7013 /* AmbianceSource_iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbianceSource_iTunes.h; sourceTree = "<group>"; };
+		1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbianceSource_iTunes.m; sourceTree = "<group>"; };
 		159019D212FD64D9007D7AE7 /* StatusIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = StatusIcon.pdf; path = Art/StatusIcon.pdf; sourceTree = SOURCE_ROOT; };
 		159019D412FD65B2007D7AE7 /* StatusIcon-Highlighted.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "StatusIcon-Highlighted.pdf"; path = "Art/StatusIcon-Highlighted.pdf"; sourceTree = SOURCE_ROOT; };
 		15901A1612FD6A4A007D7AE7 /* libAmbianceClient-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libAmbianceClient-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,8 @@
 			children = (
 				15B08B9F12FD5E8A00BA0A0A /* AmbianceAppDelegate.h */,
 				15B08BA012FD5E8A00BA0A0A /* AmbianceAppDelegate.m */,
+				1580702912FD7BB2008A7013 /* AmbianceSource_iTunes.h */,
+				1580702A12FD7BB2008A7013 /* AmbianceSource_iTunes.m */,
 				15B08BA212FD5E8B00BA0A0A /* MainMenu.xib */,
 				15B08B9412FD5E8A00BA0A0A /* Supporting Files */,
 			);
@@ -184,6 +189,7 @@
 			files = (
 				15B08B9B12FD5E8A00BA0A0A /* main.m in Sources */,
 				15B08BA112FD5E8A00BA0A0A /* AmbianceAppDelegate.m in Sources */,
+				1580702B12FD7BB2008A7013 /* AmbianceSource_iTunes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
