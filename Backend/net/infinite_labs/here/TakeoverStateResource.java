@@ -1,7 +1,6 @@
 package net.infinite_labs.here;
 
 import org.json.JSONObject;
-import org.restlet.data.Form;
 import org.restlet.representation.Representation;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
@@ -35,12 +34,18 @@ public class TakeoverStateResource extends Here.Resource {
 	}
 	
 	@Post
-	public Representation takeover(Representation entity) throws Exception {
-		Form f = getReference().getQueryAsForm();
+	public Representation fromJSON(Representation json) throws Exception {
+		if (json.getSize() == Representation.UNKNOWN_SIZE || json.getSize() > 1024 * 1024) {
+			return badRequest("Resource too large or with unknown size");
+		}
 		
-		final String clientName = f.getFirstValue("clientName");
+		String jsonString = json.getText();
+		
+		JSONObject o = new JSONObject(jsonString);
+		
+		final String clientName = o.optString("takingOverClient");
 		if (clientName == null)
-			return badRequest("clientName not specified");
+			return badRequest("takingOverClient not specified");
 		
 		final Service s = app().servicesMap().serviceNamed(name);
 		s.exclusivelyRun(new Code() {

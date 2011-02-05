@@ -95,11 +95,15 @@
 {
     NSString* url = [NSString stringWithFormat:@"services/%@/takeover", ident];
     
+    NSDictionary* request = [NSDictionary dictionaryWithObjectsAndKeys:
+                             self.clientIdentifier, @"takingOverClient",
+                             nil];
+    
     NSMutableURLRequest* req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url relativeToURL:self.URL]];
     
     [req setHTTPMethod:@"POST"];
-    [req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [req setHTTPBody:[[NSString stringWithFormat:@"clientName=%@", self.clientIdentifier] dataUsingEncoding:NSUTF8StringEncoding]];
+    [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [req setHTTPBody:[[request JSONRepresentation] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [self fetchURLRequest:req ifSucceeds:done];
 }
@@ -115,8 +119,10 @@
     NSValue* key = [NSValue valueWithNonretainedObject:con];
     AmbianceResponse done = [self.ifSucceedsBlocks objectForKey:key];
     
-    if (done)
-        done([self.responses objectForKey:key], [self.data objectForKey:key]);
+    NSHTTPURLResponse* resp = [self.responses objectForKey:key];
+    
+    if (done && resp && [resp statusCode] <= 400)
+        done(resp, [self.data objectForKey:key]);
     
     [self.ifSucceedsBlocks removeObjectForKey:key];
     [self.runningURLConnections removeObject:con];
