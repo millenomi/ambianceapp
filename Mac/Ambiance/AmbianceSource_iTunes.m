@@ -99,4 +99,35 @@
         [itunes pause];
 }
 
+- (void)takeOverWithTrackForState:(NSDictionary *)state;
+{
+    iTApplication* itunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+
+    NSString* name = [state objectForKey:@"trackName"];
+    NSString* album = [state objectForKey:@"albumName"];
+    
+    iTSource* librarySource = nil;
+    for (iTSource* s in [itunes sources]) {
+        if (s.kind == iTESrcLibrary) {
+            librarySource = s;
+            break;
+        }
+    }
+    
+    if (!librarySource)
+        return;
+    
+    // <#TODO#>
+    if (!name || !album)
+        return;
+    
+    NSPredicate* pred = [NSPredicate predicateWithFormat:@"name == %@ && album == %@", name, album];
+    
+    NSArray* a = [[[[librarySource libraryPlaylists] objectAtIndex:0] tracks] filteredArrayUsingPredicate:pred];
+    if ([a count] > 0) {
+        iTTrack* track = [a objectAtIndex:0];
+        [track playOnce:NO];
+    }
+}
+
 @end

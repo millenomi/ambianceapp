@@ -60,7 +60,9 @@
             return;
         
         [self.backend takeOverServiceWithIdentifier:kAmbianceMusicService ifSucceeds:^(NSHTTPURLResponse *resp, NSData *data) {
-            // TODO play song whose details come from 'x'.
+            
+            [self.iTunes takeOverWithTrackForState:[x objectForKey:@"state"]];
+            
         }];
     }];
 }

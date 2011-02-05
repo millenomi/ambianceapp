@@ -12,10 +12,12 @@
 
 @interface AmbianceSource_iTunes : NSObject {
 @private
-    
+    AmbianceBackend* backend;
 }
 
 - (id)initWithBackend:(AmbianceBackend*) backend;
 - (void) resign;
+
+- (void) takeOverWithTrackForState:(NSDictionary*) state;
 
 @end
