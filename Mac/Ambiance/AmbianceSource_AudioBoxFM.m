@@ -33,7 +33,11 @@
     return self;
 }
 
-#define kAmbianceAudioBoxFMBaseURL ([NSURL URLWithString:@"http://me+audioboxtrial%40infinite-labs.net:0fabio@audiobox.fm"])
+#ifdef kAmbianceAudioBoxCredentials
+#define kAmbianceAudioBoxFMBaseURL ([NSURL URLWithString:@"http://"  kAmbianceAudioBoxCredentials @"@audiobox.fm"])
+#else
+#define kAmbianceAudioBoxFMBaseURL ([NSURL URLWithString:@"http://audiobox.fm"])
+#endif
 
 static inline id ILAs(id something, Class type) {
 	if ([something isKindOfClass:type])
