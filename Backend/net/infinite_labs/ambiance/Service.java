@@ -1,4 +1,4 @@
-package net.infinite_labs.here;
+package net.infinite_labs.ambiance;
 
 import java.util.Date;
 import org.json.JSONObject;

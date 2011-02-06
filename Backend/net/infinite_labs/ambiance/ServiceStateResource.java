@@ -1,4 +1,4 @@
-package net.infinite_labs.here;
+package net.infinite_labs.ambiance;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -8,7 +8,7 @@ import org.restlet.resource.Post;
 import org.restlet.resource.Put;
 import org.restlet.resource.ResourceException;
 
-import net.infinite_labs.here.Here;
+import net.infinite_labs.ambiance.Here;
 
 public class ServiceStateResource extends Here.Resource {
 	public static JSONObject stateOfService(final Service s) throws JSONException {

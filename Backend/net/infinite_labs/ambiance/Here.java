@@ -1,4 +1,4 @@
-package net.infinite_labs.here;
+package net.infinite_labs.ambiance;
 
 import org.restlet.Application;
 import org.restlet.Restlet;

@@ -1,6 +1,6 @@
-package net.infinite_labs.here;
+package net.infinite_labs.ambiance;
 
-import net.infinite_labs.here.ram.InMemoryServicesMap;
+import net.infinite_labs.ambiance.in_memory.InMemoryServicesMap;
 
 import org.restlet.Component;
 import org.restlet.Context;

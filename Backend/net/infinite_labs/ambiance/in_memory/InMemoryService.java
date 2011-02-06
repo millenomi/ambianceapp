@@ -1,16 +1,14 @@
-package net.infinite_labs.here.ram;
+package net.infinite_labs.ambiance.in_memory;
 
 import java.util.Date;
 import java.util.Iterator;
 
-import javax.management.RuntimeErrorException;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import net.infinite_labs.here.Client;
-import net.infinite_labs.here.Code;
-import net.infinite_labs.here.Service;
+import net.infinite_labs.ambiance.Client;
+import net.infinite_labs.ambiance.Code;
+import net.infinite_labs.ambiance.Service;
 
 public class InMemoryService implements Service {
 
@@ -38,7 +36,7 @@ public class InMemoryService implements Service {
 	@SuppressWarnings("unchecked")
 	private JSONObject cloneJSONObject(JSONObject x) {
 		JSONObject o = new JSONObject();
-		Iterator<String> i = (Iterator<String>) x.keys();
+		Iterator<String> i = x.keys();
 		while (i.hasNext()) {
 			String key = i.next();
 			try {

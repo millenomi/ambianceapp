@@ -1,4 +1,4 @@
-package net.infinite_labs.here;
+package net.infinite_labs.ambiance;
 
 import org.json.JSONObject;
 import org.restlet.representation.Representation;

@@ -1,12 +1,12 @@
-package net.infinite_labs.here.ram;
+package net.infinite_labs.ambiance.in_memory;
 
 import java.util.HashSet;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import net.infinite_labs.here.Client;
-import net.infinite_labs.here.Service;
-import net.infinite_labs.here.ServicesMap;
+import net.infinite_labs.ambiance.Client;
+import net.infinite_labs.ambiance.Service;
+import net.infinite_labs.ambiance.ServicesMap;
 
 public class InMemoryServicesMap implements ServicesMap {
 

@@ -1,6 +1,6 @@
-package net.infinite_labs.here.ram;
+package net.infinite_labs.ambiance.in_memory;
 
-import net.infinite_labs.here.Client;
+import net.infinite_labs.ambiance.Client;
 
 public class InMemoryClient implements Client {
 

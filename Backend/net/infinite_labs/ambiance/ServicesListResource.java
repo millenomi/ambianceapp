@@ -1,4 +1,4 @@
-package net.infinite_labs.here;
+package net.infinite_labs.ambiance;
 
 import org.json.JSONException;
 import org.json.JSONObject;
